@@ -10,11 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require font-awesome
+ *= require trix
  *= require_tree .
  *= require_self
  */
 
 @import 'normalize';
+
 
 html, body {
   font-family: 'PT Sans Narrow', sans-serif;
@@ -35,9 +38,9 @@ a {
   left: 0;
   top: 0;
   height: 100%;
-  background: #88D0AD;
+  background: #B4DBC0;
   padding: 7em 0 0 0;
-  border-right: 1px solid #b8e2fe;
+  border-right: 1px solid #B4DBC0;
 
   ul {
     list-style: none;
@@ -82,10 +85,10 @@ a {
   padding: .5em 2.5em;
   border-radius: 0.5em;
   &:hover {
-    border: 1px solid #333734;
-    color: #22487b;
+    border: 1px solid #3d4d56;
+    color: #3d4d56;
     a {
-      color: #22487b !important;
+      color: #3d4d56 !important;
     }
   }
 }
@@ -102,8 +105,8 @@ a {
   margin-left: 200px;
   #header {
     padding: 1.2em 3.5em;
-    border-bottom: 1px solid #b8e2fe;
-    background: #529FCD;
+    border-bottom: 1px solid #B56357;
+    background: #B56357;
     color: #FFF;
     p {
       display: inline;
@@ -129,10 +132,10 @@ a {
       a {
         font-weight: 500;
         text-decoration: none;
-        color: #529FCD;
+        color: #3d4d56;
         font-size: 1.2em;
         &:hover {
-          color: #22487b;
+          color: #000;
         }
       }
     }
@@ -150,7 +153,7 @@ a {
     .title {
       font-weight: 500;
       text-decoration: none;
-      color: #529FCD;
+      color: #3d4d56;
       font-size: 2.5em;
       margin-bottom: 0;
     }
@@ -260,5 +263,21 @@ a {
       border: 1px solid #33acb7;
       color: #33acb7;
     }
+  }
+
+  /* CUSTOM STYLES */
+  .formatted_content {
+    width: 71.5%;
+    height: 200px;
+    border-radius: 6px;
+    border-color: #d6dce0;
+  }
+  .formatted_content:focus {
+    border: 3px solid #d66;
+    border-radius: 0px;
+  }
+  trix-toolbar {
+    width: 71.5%;
+
   }
 }
