@@ -1,6 +1,10 @@
 <div id="page_wrapper">
   <h1>Edit</h1>
-  <p>Image Currently Uploaded</p>
-  <%= image_tag @post.image.url(:medium) %>
-  <%= render 'form' %>
+  <% if @post.image.file? %>
+      <p>Image Currently Uploaded</p>
+      <%= image_tag @post.image.url(:medium) %>
+      <%= render 'form' %>
+  <% else %>
+      <%= render 'form' %>
+  <% end %>
 </div>
