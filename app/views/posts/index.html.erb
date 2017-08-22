@@ -3,5 +3,6 @@
     <h2 class="title"><%= link_to post.title, post %></h2>
     <p class="body"><%= truncate(strip_tags(post.body), length:100) %> </p>
     <p class="date"> Submitted by <%= post.user.username %> <%= time_ago_in_words(post.created_at) %> ago </p>
+    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"> <%= post.get_upvotes.size %> </span>
   </div>
 <% end %>

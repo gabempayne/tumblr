@@ -1,4 +1,4 @@
-<%= form_for @post do |f| %>
+<%= form_for @post, html: { multipart: true }  do |f| %>
     <% if @post.errors.any? %>
         <h2><%= pluralize(@post.errors.count, "error") %> stopped this post from saving</h2>
         <ul>
@@ -18,6 +18,12 @@
     </p>
 
     <p>
+      <%= f.label :image_upload %><br><br>
+      <%= f.file_field :image %>
+    </p>
+    <br>
+    <p>
       <%= f.submit %>
     </p>
+
 <% end %>

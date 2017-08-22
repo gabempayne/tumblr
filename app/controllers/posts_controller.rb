@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
 	def update
 		@post = Post.find(params[:id])
-		if @post.update(params[:post].permit(:title, :body))
+		if @post.update(params[:post].permit(:title, :body, :image))
 			redirect_to @post
 		else
 			render 'edit'
@@ -43,10 +43,16 @@ class PostsController < ApplicationController
 		redirect_to root_path
 	end
 
+	def upvote
+		@post = Post.find(params[:id])
+		@post.upvote_by current_user
+		redirect_back fallback_location: root_path
+	end
+
 	private
 
 	def post_params
-		params.require(:post).permit(:title, :body)
+		params.require(:post).permit(:title, :body, :image)
 	end
 
 end
