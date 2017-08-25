@@ -46,7 +46,6 @@ a {
 
   ul {
     list-style: none;
-    text-align: right;
     padding-right: 3em;
     .category {
       font-weight: 900;
@@ -55,6 +54,7 @@ a {
       color: #22747b;
     }
     li {
+      text-align: left;
       padding: .45em 0;
       font-family: 'Helvetica Neue', sans-serif;
       font-weight: 200;
@@ -283,5 +283,9 @@ a {
   trix-toolbar {
     width: 71.5%;
 
+  }
+
+  .link-container {
+    padding: 7em 0 0 0;
   }
 }
