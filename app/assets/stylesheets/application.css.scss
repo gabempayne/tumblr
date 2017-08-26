@@ -47,12 +47,14 @@ a {
     list-style: none;
     padding-right: 3em;
     .category {
-      font-weight: 900;
+      color: #FFF;
+      font-weight: 800;
       font-size: 2.5em;
       text-transform: uppercase;
-      color: #22747b;
+      padding-top :0;
     }
     li {
+      font-size: 1.5em;
       text-align: left;
       padding: .45em 0;
       font-family: 'Helvetica Neue', sans-serif;
@@ -107,7 +109,7 @@ a {
 #main_content {
   margin-left: 200px;
   #header {
-    padding: 2.3em 2.5em;
+    padding: 1.2em 2.5em;
     border-bottom: 1px solid #B4DBC0;
     background: #B4DBC0;
     color: #FFF;
@@ -231,7 +233,6 @@ a {
         line-height: 1.75;
       }
       a {
-        color: #33acb7;
         font-weight: 700;
         text-decoration: none;
       }
@@ -287,4 +288,5 @@ a {
   .link-container {
     padding: 7em 0 0 0;
   }
+
 }
