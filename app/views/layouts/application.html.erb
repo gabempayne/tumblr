@@ -13,16 +13,27 @@
   <body>
   <div id="sidebar">
     <ul>
-      <li class="category">Postee<li>
-      <li><%= link_to "Posts", root_path %></li>
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
+      <div>
+        <li class="category">Postee<li>
+      </div>
 
-      <% if !user_signed_in? %>
-        <li><%= link_to "Login", new_user_session_path %></li>
-      <% end %>
+      <div>
+        <li><%= link_to "Posts", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
 
+        <% if !user_signed_in? %>
+          <li><%= link_to "Login", new_user_session_path %></li>
+        <% end %>
+      </div>
     </ul>
+
+    <div>
+      <span><a href="http://www.facebook.com/gabrielmpayne"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a></span>
+      <span><a href="http://www.twitter.com/gabempayne"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></span>
+      <span><a href="http://www.facebook.com/gabempayne"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a></span>
+      <span><a href="http://www.facebook.com/gabspayne"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></span>
+    </div>
   </div>
 
   <div id="main_content">
@@ -33,7 +44,7 @@
 
       <% if user_signed_in? %>
         <div class="buttons">
-          <button class="button"><%= link_to "Make Post", new_post_path %></button>
+          <button class="button"><%= link_to "Post", new_post_path %></button>
           <button class="button"><%= link_to "Logout", destroy_user_session_path, method: :delete %></button>
         </div>
       <% end %>
